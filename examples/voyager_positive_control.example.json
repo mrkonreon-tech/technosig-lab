@@ -1,0 +1,22 @@
+{
+  "id": "voyager1_bl_gbt_xband",
+  "dataset_class": "positive_control",
+  "class": "known_artificial_spacecraft_carrier",
+  "positive_control": {
+    "status": "PASS",
+    "candidate_window_mhz": [8420.2163, 8420.2166],
+    "morphology": "narrowband_drifting",
+    "peaks": 6,
+    "z_max": 38.77,
+    "z_mean": 35.03,
+    "candidate_score": 514.85,
+    "estimated_drift_hz_per_sec": -0.107
+  },
+  "wide_scan": {
+    "top_frequency_mhz": 8420.216449386,
+    "top_score": 93.861,
+    "p99_threshold": 5.127,
+    "estimated_drift_hz_per_sec": -0.1
+  },
+  "interpretation": "known artificial carrier with Voyager-associated secondary narrowband-drifting responses"
+}

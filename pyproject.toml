@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "technosig-lab"
+version = "0.1.0"
+description = "Reproducible benchmark and vetting harness for narrowband drifting-signal detection."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "BSD-3-Clause"
+authors = [
+  { name = "technosig_lab contributors" }
+]
+keywords = [
+  "seti",
+  "technosignatures",
+  "signal-detection",
+  "waterfall",
+  "breakthrough-listen"
+]
+dependencies = [
+  "numpy>=1.24",
+  "matplotlib>=3.7",
+  "h5py>=3.9",
+  "blimpy>=2.1"
+]
+
+[project.urls]
+Homepage = "https://github.com/mrkonreon-tech/technosig-lab"
+Issues = "https://github.com/mrkonreon-tech/technosig-lab/issues"
+
+[project.scripts]
+technosig-lab = "technosig_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["technosig_lab*"]

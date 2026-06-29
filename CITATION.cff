@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this benchmark and vetting harness, please cite it."
+title: "technosig_lab"
+version: "0.1.0"
+date-released: "2026-06-29"
+authors:
+  - name: "technosig_lab contributors"
+license: "BSD-3-Clause"
+keywords:
+  - SETI
+  - technosignatures
+  - narrowband detection
+  - Breakthrough Listen

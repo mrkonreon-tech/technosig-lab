@@ -1,0 +1,297 @@
+{
+  "schema_version": 1,
+  "datasets": [
+    {
+      "id": "voyager1_bl_gbt_xband",
+      "dataset_class": "positive_control",
+      "class": "known_artificial_spacecraft_carrier",
+      "path": "data/voyager1_bl/voyager_f1032192_t300_v2.fil",
+      "format": "SIGPROC filterbank",
+      "source": {
+        "name": "Breakthrough Listen Voyager 1 GBT filterbank",
+        "manifest": "data/voyager1_bl/SOURCE_MANIFEST.json",
+        "header_summary": "data/voyager1_bl/HEADER_SUMMARY.json"
+      },
+      "expected": {
+        "primary_morphology": "narrowband_drifting",
+        "primary_frequency_mhz": 8420.216449386,
+        "drift_hz_per_sec": -0.1,
+        "frequency_context": "Voyager 1 carrier neighborhood"
+      },
+      "evidence": {
+        "carrier_candidates": "results/voyager_candidates_carrier_run.jsonl",
+        "carrier_thresholds": "results/voyager_thresholds_8420_18_25_run.jsonl",
+        "offtarget_candidates": "results/voyager_candidates_offtarget_run.jsonl",
+        "offtarget_thresholds": "results/voyager_thresholds_offtarget_run.jsonl",
+        "wide_thresholds": "results/voyager_thresholds_wide_8420_00_60_absolute.jsonl",
+        "frequency_offsets": "results/voyager_candidate_frequency_offsets.json",
+        "secondary_8420_2391_candidates": "results/voyager_secondary_8420_2391_candidates.jsonl",
+        "secondary_8420_1941_candidates": "results/voyager_secondary_8420_1941_candidates.jsonl",
+        "secondary_8420_1938_candidates": "results/voyager_secondary_8420_1938_candidates.jsonl"
+      },
+      "positive_control": {
+        "status": "PASS",
+        "candidate_window_mhz": [
+          8420.2163,
+          8420.2166
+        ],
+        "morphology": "narrowband_drifting",
+        "peaks": 6,
+        "z_max": 38.77,
+        "z_mean": 35.03,
+        "candidate_score": 514.85,
+        "estimated_drift_hz_per_sec": -0.107
+      },
+      "wide_scan": {
+        "window_mhz": [
+          8420.0,
+          8420.6
+        ],
+        "top_frequency_mhz": 8420.216449386,
+        "top_score": 93.861,
+        "p99_threshold": 5.127,
+        "estimated_drift_hz_per_sec": -0.1
+      },
+      "negative_control": {
+        "status": "FAIL_AS_EXPECTED",
+        "candidate_window_mhz": [
+          8420.3,
+          8420.3003
+        ],
+        "peaks": 0,
+        "clusters": 0,
+        "interpretation": "nearby off-target morphology gate found no narrowband_drifting cluster"
+      },
+      "secondary_responses": [
+        {
+          "frequency_mhz": 8420.239107666,
+          "delta_from_primary_khz": 22.658,
+          "morphology": "narrowband_drifting",
+          "targeted_morphology_score": 86.95,
+          "wide_scan_score": 30.227,
+          "drift_hz_per_sec": -0.107
+        },
+        {
+          "frequency_mhz": 8420.194108997,
+          "delta_from_primary_khz": -22.34,
+          "morphology": "narrowband_drifting",
+          "targeted_morphology_score": 109.62,
+          "wide_scan_score": 22.294,
+          "drift_hz_per_sec": -0.094
+        },
+        {
+          "frequency_mhz": 8420.193791106,
+          "delta_from_primary_khz": -22.658,
+          "morphology": "narrowband_drifting",
+          "targeted_morphology_score": 115.67,
+          "wide_scan_score": 13.12,
+          "drift_hz_per_sec": -0.094
+        }
+      ],
+      "interpretation": "known artificial carrier with Voyager-associated secondary narrowband-drifting responses",
+      "not_proven": [
+        "blind SETI candidate status",
+        "general survey performance",
+        "calibrated false-alarm behavior across observing conditions",
+        "robust RFI rejection"
+      ]
+    },
+    {
+      "id": "hip194_sband_2375p931_bldr1_event",
+      "dataset_class": "bldr_event_candidate",
+      "class": "bldr1_sband_event_candidate",
+      "status": "initial_analysis_complete",
+      "classification": "low_strength_event_table_hit",
+      "target": "HIP194",
+      "path": "data/bl_sband/spliced_blc2021222324252627_guppi_57992_30093_HIP194_0014.gpuspec.0000.h5",
+      "format": "HDF5",
+      "source": {
+        "name": "Breakthrough Listen BLDR1 S-band event table",
+        "index": "https://seti.berkeley.edu/listen2019/sband2019_events.csv",
+        "manifest": "data/bl_sband/HIP194_2375p931_SOURCE_MANIFEST.json",
+        "header_summary": "data/bl_sband/HIP194_2375p931_HEADER_SUMMARY.json",
+        "nearest_rows": "results/sband_2380_nearest_fileids.json",
+        "fileid_event_rows": "results/hip194_fileid_event_rows.json"
+      },
+      "archive": {
+        "api_query": "https://seti.berkeley.edu/opendata/api/query-files?target=%21HIP194&telescopes=GBT&file-types=hdf5&limit=500",
+        "url": "https://bldata.berkeley.edu/pipeline/AGBT17B_999_15/holding/spliced_blc2021222324252627_guppi_57992_30093_HIP194_0014.gpuspec.0000.h5",
+        "file_id": "spliced_blc2021222324252627_guppi_57992_30093_HIP194_0014.gpuspec.0000.h5",
+        "file_size_bytes": 15666581851,
+        "file_size_gib": 14.59,
+        "md5sum": "41351c2732684649709009683003b2f0",
+        "sha256": "C0D60C50E263219FF21535F5374A6C99BA57C310C2C36B94F6F5EC29E8F39FB6",
+        "mjd": 57992.34829861111,
+        "utc": "Sun, 27 Aug 2017 08:21:33 GMT",
+        "archive_center_frequency_mhz": 2269.62890625
+      },
+      "source_event": {
+        "requested_frequency_mhz": 2380.0,
+        "freq_mid_mhz": 2375.931298,
+        "delta_from_requested_mhz": -4.068702,
+        "snr": 14.790411,
+        "drift_hz_per_sec": -0.009566
+      },
+      "local_header": {
+        "status": "PASS",
+        "frequency_range_mhz": [
+          1818.4570340439677,
+          2720.80078125
+        ],
+        "contains_source_frequency_mhz": true,
+        "contains_requested_2380_mhz": true,
+        "nchans": 322961408,
+        "tsamp_sec": 18.253611008,
+        "selection_shape": [
+          16,
+          1,
+          322961408
+        ]
+      },
+      "file_integrity": {
+        "size_verified": true,
+        "sha256_verified": true,
+        "sha256": "C0D60C50E263219FF21535F5374A6C99BA57C310C2C36B94F6F5EC29E8F39FB6",
+        "md5_expected_from_archive": "41351c2732684649709009683003b2f0",
+        "md5_verified": false
+      },
+      "evidence": {
+        "event_thresholds": "results/hip194_2375p93_thresholds.jsonl",
+        "event_candidates": "results/hip194_2375p93_candidates.jsonl",
+        "requested_2380_thresholds": "results/hip194_2380p00_thresholds.jsonl",
+        "requested_2380_candidates": "results/hip194_2380p00_candidates.jsonl",
+        "summary": "results/hip194_sband_2375p93_2380p00_summary.json",
+        "candidate_evidence": "results/hip194_sband_candidate_evidence.json"
+      },
+      "initial_analysis": {
+        "event_window": {
+          "f_start_mhz": 2375.9,
+          "f_stop_mhz": 2375.96,
+          "drift_search_score_max": 48.13189010729773,
+          "drift_search_p99_threshold": 46.53408360920945,
+          "drift_search_p999_threshold": 47.972109457488905,
+          "drift_search_p9999_threshold": 48.115912042316836,
+          "score_margin_p99": 1.597806498088275,
+          "score_margin_p999": 0.15978064980882323,
+          "score_margin_p9999": 0.01597806498089227,
+          "score_excess_ratio_p99": 1.034336262243962,
+          "score_excess_ratio_p999": 1.0033306988501394,
+          "score_excess_ratio_p9999": 1.0003320744490272,
+          "quantile_stability_gate": "fail_borderline_tail",
+          "top_frequency_mhz": 2375.937796756625,
+          "top_drift_hz_per_sec": 0.0,
+          "morphology": "no narrowband_drifting cluster at z >= 8",
+          "total_peaks": 4,
+          "total_clusters": 4,
+          "morphology_counts": {
+            "sparse": 4
+          }
+        },
+        "requested_2380_window": {
+          "f_start_mhz": 2379.95,
+          "f_stop_mhz": 2380.05,
+          "drift_search_score_max": 4.92155917731259,
+          "drift_search_p99_threshold": 4.874224797432534,
+          "top_frequency_mhz": 2380.007294565439,
+          "top_drift_hz_per_sec": 0.63,
+          "morphology": "no clusters at z >= 8",
+          "total_peaks": 0,
+          "total_clusters": 0
+        }
+      },
+      "static_rejection_rerun": {
+        "exclude_drift_abs_lt_hz_per_sec": 0.5,
+        "original_score": 48.13189010729773,
+        "nonstatic_score": 7.688434065786533,
+        "nonstatic_score_drop": 40.4434560415112,
+        "nonstatic_score_ratio": 0.15973679921247924,
+        "nonstatic_top_drift_hz_per_sec": -0.55,
+        "interpretation": "score collapses when static and near-static drift tracks are excluded"
+      },
+      "neighbor_window_report": {
+        "windows_mhz": [
+          [
+            2375.7,
+            2375.8
+          ],
+          [
+            2375.8,
+            2375.9
+          ],
+          [
+            2375.9,
+            2375.96
+          ],
+          [
+            2375.96,
+            2376.06
+          ],
+          [
+            2376.06,
+            2376.16
+          ]
+        ],
+        "event_rank_among_neighbor_windows": 1,
+        "neighbor_max_score": 4.951889717459199,
+        "gate": "pass_locally_distinct",
+        "score_distribution": {
+          "count": 5,
+          "min": 4.867569850620214,
+          "median": 4.878211999299877,
+          "mean": 13.540297384217675,
+          "max": 48.13189010729773
+        }
+      },
+      "gates": {
+        "header": "pass",
+        "frequency_coverage": "pass",
+        "score_p99": "weak_pass",
+        "quantile_stability": "fail_borderline_tail",
+        "morphology": "fail_no_narrowband_drifting",
+        "drift": "fail_static",
+        "static_rejection": "fail_static_supported",
+        "neighbor_window": "pass_locally_distinct",
+        "positive_control": "fail_not_known_positive"
+      },
+      "candidate_strength": "low",
+      "expected": {
+        "morphology": "not_confirmed_by_current_morphology_gate",
+        "source_frequency_mhz": 2375.931298,
+        "drift_hz_per_sec": -0.009566
+      },
+      "completed_checks": [
+        "downloaded HDF5 with expected byte size",
+        "verified blimpy header can be read",
+        "verified frequency coverage contains 2375.931298 MHz",
+        "verified frequency coverage contains 2380.000000 MHz",
+        "ran event-table frequency window",
+        "ran requested 2380 MHz control window",
+        "ran static rejection rerun with abs drift below 0.5 Hz/s excluded",
+        "ran neighbor window vetting around event frequency",
+        "generated candidate evidence gate report"
+      ],
+      "planned_windows": [
+        {
+          "id": "event_window",
+          "f_start_mhz": 2375.9,
+          "f_stop_mhz": 2375.96,
+          "purpose": "event-table frequency neighborhood"
+        },
+        {
+          "id": "requested_2380_window",
+          "f_start_mhz": 2379.95,
+          "f_stop_mhz": 2380.05,
+          "purpose": "requested 2380 MHz control window if covered by the file"
+        }
+      ],
+      "caveats": [
+        "Nearest event to 2380 MHz in +/-5 MHz search, not exactly 2380.000 MHz",
+        "Same FileID appears in multiple BLDR1 event-table rows",
+        "Current morphology gate did not recover a narrowband_drifting cluster",
+        "Event-window drift-search top frequency is near but not equal to the CSV FreqMid",
+        "Do not classify as a known positive control"
+      ],
+      "interpretation": "initial detector evidence only: weak score excess, static/near-static top drift, and no narrowband_drifting morphology recovery"
+    }
+  ]
+}

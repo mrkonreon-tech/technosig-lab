@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "datasets": [
+    {
+      "id": "voyager1_bl_gbt_xband",
+      "dataset_class": "positive_control",
+      "class": "known_artificial_spacecraft_carrier",
+      "path": "data/voyager1_bl/voyager_f1032192_t300_v2.fil",
+      "format": "SIGPROC filterbank",
+      "expected": {
+        "primary_morphology": "narrowband_drifting",
+        "primary_frequency_mhz": 8420.216449386,
+        "drift_hz_per_sec": -0.1
+      },
+      "interpretation": "known artificial carrier with Voyager-associated secondary narrowband-drifting responses"
+    },
+    {
+      "id": "hip194_sband_2375p931_bldr1_event",
+      "dataset_class": "bldr_event_candidate",
+      "class": "bldr1_sband_event_candidate",
+      "status": "initial_analysis_complete",
+      "classification": "low_strength_event_table_hit",
+      "candidate_strength": "low",
+      "source_event": {
+        "requested_frequency_mhz": 2380.0,
+        "freq_mid_mhz": 2375.931298,
+        "snr": 14.790411,
+        "drift_hz_per_sec": -0.009566
+      },
+      "interpretation": "initial detector evidence only"
+    }
+  ]
+}

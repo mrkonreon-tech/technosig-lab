@@ -1,0 +1,40 @@
+{
+  "id": "hip194_sband_2375p931_bldr1_event",
+  "classification": "low_strength_event_table_hit",
+  "candidate_strength": "low",
+  "positive_control": false,
+  "gates": {
+    "header": "pass",
+    "frequency_coverage": "pass",
+    "score_p99": "weak_pass",
+    "quantile_stability": "fail_borderline_tail",
+    "drift": "fail_static",
+    "static_rejection": "fail_static_supported",
+    "morphology": "fail_no_narrowband_drifting",
+    "neighbor_window": "pass_locally_distinct",
+    "positive_control": "fail_not_known_positive"
+  },
+  "event_window": {
+    "top_score": 48.13189010729773,
+    "margins": {
+      "p99": 1.597806498088275,
+      "p999": 0.15978064980882323,
+      "p9999": 0.01597806498089227
+    },
+    "score_excess_ratio": {
+      "p99": 1.034336262243962,
+      "p999": 1.0033306988501394,
+      "p9999": 1.0003320744490272
+    },
+    "top_drift_hz_per_sec": 0.0,
+    "morphology": "no_narrowband_drifting"
+  },
+  "static_rejection_rerun": {
+    "exclude_drift_abs_lt_hz_per_sec": 0.5,
+    "original_score": 48.13189010729773,
+    "nonstatic_score": 7.688434065786533,
+    "nonstatic_score_drop": 40.4434560415112,
+    "nonstatic_score_ratio": 0.15973679921247924,
+    "nonstatic_top_drift_hz_per_sec": -0.55
+  }
+}
